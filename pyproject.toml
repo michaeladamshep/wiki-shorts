@@ -1,0 +1,26 @@
+[project]
+name = "wiki-shorts"
+version = "0.1.0"
+description = "Wikipedia article -> 60s vertical video -> posted everywhere"
+readme = "README.md"
+authors = [
+    { name = "michaeladamshep", email = "Michaeladamshep@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.13.0",
+    "edge-tts>=7.3.1",
+    "google-api-python-client>=2.201.0",
+    "google-auth-oauthlib>=1.5.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+    "typer>=0.27.3",
+]
+
+[project.scripts]
+wiki-shorts = "wiki_shorts.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
